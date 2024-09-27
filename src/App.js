@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 import NumberTicker from './number';
 
 function App() {
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
     <div className="h-[100dvh] w-screen relative overflow-hidden">
       {/* Iframe covering the entire screen */}
@@ -16,12 +18,13 @@ function App() {
 
       {/* Animated heal.png rising from the bottom */}
       <motion.img
-        src='heal.png'
+        src="heal.png"
         alt="Heal"
         initial={{ y: '100%', opacity: 0 }}
-        animate={{ y: '0%', opacity: 1 }}
+        animate={isVisible ? { y: '0%', opacity: 1 } : { y: '100%', opacity: 0 }}
         transition={{ duration: 2, ease: 'easeOut' }}
         className="absolute -bottom-5 w-[45%] md:w-[35%] z-10"
+        onClick={() => setIsVisible(!isVisible)} // Toggle visibility on click
       />
 
       {/* Overlaying grid and tickers on top of the iframe */}
@@ -47,7 +50,7 @@ function App() {
         <div className="text-5xl font-custom absolute right-[13%] top-[32%] text-[#52ff57] flex">
           +<NumberTicker className="text-[#52ff57]" value={115} />%
         </div>
-        <div className="text-5xl font-custom absolute left-[35%] top-[59%] text-[#52ff57] flex">
+        <div className="text-5xl font-custom absolute left-[30%] top-[55%] text-[#52ff57] flex">
           +<NumberTicker className="text-[#52ff57]" value={620} />%
         </div>
       </div>
