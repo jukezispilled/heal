@@ -10,7 +10,7 @@ function App() {
     <div className="h-[100dvh] w-screen relative overflow-hidden">
       {/* Iframe covering the entire screen */}
       <iframe
-        src="https://pump.fun/board"
+        src="https://pump.fun/Hwtz95PvTNPpQeGh5GjhsbQ4tXSCz1f9aNX6Tjx6pump"
         title="Pump Fun Board"
         className="h-full w-full border-0"
         allowFullScreen
