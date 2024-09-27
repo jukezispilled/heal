@@ -5,7 +5,7 @@ import NumberTicker from './number';
 
 function App() {
   return (
-    <div className="h-screen w-screen relative overflow-hidden">
+    <div className="h-[100dvh] w-screen relative overflow-hidden">
       {/* Iframe covering the entire screen */}
       <iframe
         src="https://pump.fun/board"
