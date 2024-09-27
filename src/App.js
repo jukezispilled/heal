@@ -41,7 +41,7 @@ function App() {
         <div className="text-5xl font-custom absolute left-[45%] top-[90%] text-[#52ff57] flex">
           +<NumberTicker className="text-[#52ff57]" value={364} />%
         </div>
-        <div className="text-5xl font-custom absolute left-[30%] top-[4%] text-[#52ff57] flex">
+        <div className="text-5xl font-custom absolute left-[22%] top-[6%] text-[#52ff57] flex">
           +<NumberTicker className="text-[#52ff57]" value={196} />%
         </div>
         <div className="text-5xl font-custom absolute right-[13%] top-[32%] text-[#52ff57] flex">
